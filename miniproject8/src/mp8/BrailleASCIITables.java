@@ -13,7 +13,9 @@ public class BrailleASCIITables {
    * @return
    */
   protected static String toBraille(char letter){
-    //STUB
+    //STUB: : create a BitTree that represents an ASCII character as a bit (can we use a hashtable to do that?). 
+    //Traverse it bits.length() times using a for loop.
+    // Append an empty string each time you traverse it.
     return new String();
   }
 
@@ -23,7 +25,8 @@ public class BrailleASCIITables {
    * @return
    */
   protected static String toASCII(String bits){
-    //STUB
+    //STUB: create a BitTree that represents the alphabet (or just create nodes as needed?). 
+    //Traverse it bits.length() times using a for loop. Return a character (as a string).
     return new String();
   }
 
@@ -33,7 +36,15 @@ public class BrailleASCIITables {
    * @return
    */
   protected static String toUnicode(String bits){
-    //STUB
+    //STUB 
     return new String();
+  }
+
+  protected static void createASCIITree(){
+
+  }
+
+  protected static void createBrailleTree(){
+
   }
 }
