@@ -6,8 +6,6 @@
 
 Contains classes BitTree, BrailleASCIITables, and BrailleASCII.
 
----
-
 ## Acknowledgements
 
 String.charAt()
