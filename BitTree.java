@@ -37,7 +37,7 @@ public class BitTree {
   protected void set(String bits, String value) throws Exception {
 
     if (bits.length() != 6) {
-      throw new Exception("Bits' length should be 8."); // add a more specific exception
+      throw new Exception("Bits' length should be 6."); // add a more specific exception
     } else {
       BitTreeNode current = this.first;
       for (int i = 0; i < this.size; i++) {
