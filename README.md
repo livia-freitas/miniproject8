@@ -12,4 +12,6 @@ String.charAt()
 
 https://www.geeksforgeeks.org/java-program-to-get-a-character-from-a-string/
 
+How to read an InputStream
 
+https://tecadmin.net/how-to-read-inputstream-into-a-string-in-java/
