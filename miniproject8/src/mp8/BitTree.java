@@ -12,7 +12,6 @@ public class BitTree {
 
   int size;
   BitTreeNode first;
-  // comecar por aqui!!!!!!!!!
 
   /**
    * Builds a tree that will store mappings from strings of n bits to strings. 
@@ -59,6 +58,10 @@ public class BitTree {
    */
   protected String get(String bits) throws Exception {
     // Add Exception!!!
+    if(bits.length() != this.size){
+      throw new Exception("String length should be 6 for Braille and 8 for ASCII.");
+    }
+    //how to check if the path exists?
     BitTreeNode current = this.first;
     for(int i = 0; i < this.size; i++){//checar se essas condicoes tao certas ou vai um Node alem do necessario
        if (bits.charAt(i) == 0) {//if bit is 0, go left
