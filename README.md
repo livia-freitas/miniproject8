@@ -15,3 +15,5 @@ https://www.geeksforgeeks.org/java-program-to-get-a-character-from-a-string/
 How to read an InputStream
 
 https://tecadmin.net/how-to-read-inputstream-into-a-string-in-java/
+
+I used ChatGPT to create the a2b.set(), b2a().set, and b2u.set() lines of code.
