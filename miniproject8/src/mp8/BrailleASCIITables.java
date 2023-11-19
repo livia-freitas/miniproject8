@@ -51,7 +51,7 @@ public class BrailleASCIITables {
   }
 
   protected static AssociativeArray<String, String> createASCIITable() { // should this be a
-                                                                           // field?
+                                                                         // field?
     AssociativeArray<String, String> a2b = new AssociativeArray<>();
 
     // UPPERCASE LETTERS
@@ -150,5 +150,76 @@ public class BrailleASCIITables {
     b2a.set("000000", " ");
 
     return b2a;
+  }
+
+  protected static AssociativeArray<String, String> createBrailletoUnicodeTable() {
+
+    AssociativeArray<String, String> b2u = new AssociativeArray<>();
+
+    b2u.set("000000", "2800");
+    b2u.set("100000", "2801");
+    b2u.set("010000", "2802");
+    b2u.set("110000", "2803");
+    b2u.set("001000", "2804");
+    b2u.set("101000", "2805");
+    b2u.set("011000", "2806");
+    b2u.set("111000", "2807");
+    b2u.set("000100", "2808");
+    b2u.set("100100", "2809");
+    b2u.set("010100", "280A");
+    b2u.set("110100", "280B");
+    b2u.set("001100", "280C");
+    b2u.set("101100", "280D");
+    b2u.set("011100", "280E");
+    b2u.set("111100", "280F");
+    b2u.set("000010", "2810");
+    b2u.set("100010", "2811");
+    b2u.set("010010", "2812");
+    b2u.set("110010", "2813");
+    b2u.set("001010", "2814");
+    b2u.set("101010", "2815");
+    b2u.set("011010", "2816");
+    b2u.set("111010", "2817");
+    b2u.set("000110", "2818");
+    b2u.set("100110", "2819");
+    b2u.set("010110", "281A");
+    b2u.set("110110", "281B");
+    b2u.set("001110", "281C");
+    b2u.set("101110", "281D");
+    b2u.set("011110", "281E");
+    b2u.set("111110", "281F");
+    b2u.set("000001", "2820");
+    b2u.set("100001", "2821");
+    b2u.set("010001", "2822");
+    b2u.set("110001", "2823");
+    b2u.set("001001", "2824");
+    b2u.set("101001", "2825");
+    b2u.set("011001", "2826");
+    b2u.set("111001", "2827");
+    b2u.set("000101", "2828");
+    b2u.set("100101", "2829");
+    b2u.set("010101", "282A");
+    b2u.set("110101", "282B");
+    b2u.set("001101", "282C");
+    b2u.set("101101", "282D");
+    b2u.set("011101", "282E");
+    b2u.set("111101", "282F");
+    b2u.set("000011", "2830");
+    b2u.set("100011", "2831");
+    b2u.set("010011", "2832");
+    b2u.set("110011", "2833");
+    b2u.set("001011", "2834");
+    b2u.set("101011", "2835");
+    b2u.set("011011", "2836");
+    b2u.set("111011", "2837");
+    b2u.set("000111", "2838");
+    b2u.set("100111", "2839");
+    b2u.set("010111", "283A");
+    b2u.set("110111", "283B");
+    b2u.set("001111", "283C");
+    b2u.set("101111", "283D");
+    b2u.set("011111", "283E");
+    b2u.set("111111", "283F");
+    return b2u;
   }
 }
