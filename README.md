@@ -16,4 +16,10 @@ How to read an InputStream
 
 https://tecadmin.net/how-to-read-inputstream-into-a-string-in-java/
 
-I used ChatGPT to create the a2b.set(), b2a().set, and b2u.set() lines of code.
+I used ChatGPT to: create the a2b.set(), b2a().set, and b2u.set() lines of code; help me find a procedure to parse strings and regular expressions.
+
+https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+
+Tree Traversal Techniques
+
+https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
