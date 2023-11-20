@@ -4,6 +4,7 @@ public class BitTreeExperiments {
   public static void main(String[] args) throws Exception {
 
     /* SET AND GET FOR BRAILLE TO ASCII */
+
     BitTree brailleTree = new BitTree(6);
     brailleTree.set("100000", "A");
     System.out.println(brailleTree.get("100000"));
