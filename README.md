@@ -24,3 +24,7 @@ Tree Traversal Techniques
 
 https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
+
+How to get the binary value of an ASCII character
+
+https://stackoverflow.com/questions/43455440/how-do-you-convert-a-character-to-its-binary-ascii-code-in-java-also-does-the-b
