@@ -1,12 +1,11 @@
 package mp8;
 
-import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Stack;
+
 
 /**
  * Author: Livia Stein Freitas Documentation inspired by Samuel Rebelsky's project instructions.
@@ -61,10 +60,9 @@ public class BitTree {
    * Follows the path through the tree given by bits, returning the value at the end. If there is no
    * such path, or if bits is the incorrect length, get should throw an exception.
    */
-  
+
   protected String get(String bits) throws Exception {
-    // Add Exception!!!
-    if (bits.length() != this.size) {
+    if ((bits.length() != 6) && (bits.length()!=8)) {
       throw new Exception("String length should be 6 for Braille and 8 for ASCII.");
     }
     // how to check if the path exists?
@@ -86,27 +84,19 @@ public class BitTree {
    * 
    * @param pen
    */
-  /*
-  protected void dump(PrintWriter pen) {
-    Stack<BitTreeNode> S = new Stack<>();
-    BitTreeNode current = this.first;
-    String key = "";
-    String value = "";
-    while (!S.isEmpty()) {
-      while (current != null) {
-        S.push(current);
-        current = current.left;
-      }//while(current != null)
-      //shit maybe I should use a BitTreeLeaf??? should it extend a TreeNode
-      BitTreeNode popped = S.pop();
-      key.concat(popped.value.toString());//adds the node's value to the string
-      current = popped.right;
-    }//while(!S.isempty())
-    key = key.substring(1); // removes the initial -1 that comes from the tree's first node
-    pen.println(key + "," + value);
-
-
-  }*/
+  
+  protected void dump(PrintWriter pen, BitTreeNode current, String path) {
+    if(current.value != -1){
+      path.concat(Integer.toString(current.value));
+    }
+    if (current.result != null){
+      pen.println(path + "," + current.result);
+    } else {
+      this.dump(pen, current.left, new String());
+      this.dump(pen, current.right, new String());
+    }
+  }
+   
 
   /**
    * Reads a series of lines of the form bits,value and stores them in the tree.
@@ -116,7 +106,7 @@ public class BitTree {
    */
   protected void load(InputStream source) throws Exception {
     String inputString = readInputStreamAsString(source);
-    String[] data = inputString.split("[,\\s]+");
+    String[] data = inputString.split(",");
     for (int i = 0; i < data.length; i += 2) {
       this.set(data[i], data[i + 1]);
     } // for
@@ -124,7 +114,7 @@ public class BitTree {
 
 
 
-  public class BitTreeNode { // if it's an inner class it should be able to use the BitTree methods
+  public class BitTreeNode { 
     BitTreeNode left;
     BitTreeNode right;
     Integer value;
@@ -134,12 +124,12 @@ public class BitTree {
       this.left = null;
       this.right = null;
       this.value = bit;
-      this.result = null; //[should result even be a string? should it be a leaf?]
+      this.result = null; 
     }
 
   }
 
-  /* HELPER (taken from TecAdmin's article on how to turn an InputStream input into a string) */
+  /* HELPER (adapted from TecAdmin's article on how to turn an InputStream input into a string) */
 
   public static String readInputStreamAsString(InputStream inputStream) throws IOException {
     BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
@@ -147,6 +137,7 @@ public class BitTree {
     String line;
     while ((line = reader.readLine()) != null) {
       stringBuilder.append(line);
+      stringBuilder.append(",");
     }
     reader.close();
     return stringBuilder.toString();
